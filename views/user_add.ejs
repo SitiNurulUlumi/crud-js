@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="text-center"><%= title %></h2>
+             <!-- awal card form -->
+             <div class="card mt-3">
+                <div class="card-header bg-primary text-white">
+                  Silahkan Masukkan Data Anda
+                </div>
+                <div class="card-body">
+                    <form action="/save" method="post">
+                        <div class="form-group">
+                            <label for="username">Nama :</label>
+                            <input type="text" class="form-control" id="username" placeholder="Masukkan Nama" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email : </label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan Email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="no_hp">No Hp :</label>
+                        <input type="text" class="form-control" id="pwd" placeholder="Masukkan Nomor hp" name="no_hp" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat : </label>
+                            <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat" name="alamat" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_admin">ID Admin : </label>
+                            <select name="id_admin" id="id_admin" class="form-control" required>
+                                <option></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                           </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-danger">Kosongkan</button>
+                </div>
+              </div>
+              <!-- akhir card form -->
+        </div>
+    </body>
+</html>
