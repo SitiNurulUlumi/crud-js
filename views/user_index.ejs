@@ -18,7 +18,8 @@
         <div class="container">
             <!-- <h2 class="text-center"><%= title %></h2> -->
             <h2 class="text-center">Toko Heaven Light</h2>
-            <a href="/add" class="btn btn-sm btn-secondary">Add User</a><br>
+            <a href="/ress" class="btn btn-sm btn-secondary">Data Reseller</a> 
+            <a href="/admin" class="btn btn-sm btn-secondary">Data Admin</a>
             <!-- awal -->
             <div class="card mt-3">
             <div class="card-header bg-info text-white">
@@ -28,25 +29,23 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>No Hp</th>
-                    <th>Alamat</th>
-                    <th>Id_admin</th>
-                    <th>Action</th>
+                    <th class="text-center">Nama Reseller</th>
+                    <th class="text-center">No Hp</th>
+                    <th class="text-center">Alamat</th>
+                    <th class="text-center">Nama Admin</th>
+                    <th class="text-center">Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <% reseller.forEach(function(seller){ %>
+                    <% seller.forEach(function(reseller){ %>
                         <tr>
                             <td><%= seller.username %></td>
-                            <td><%= seller.email %></td>
                             <td><%= seller.no_hp %></td>
                             <td><%= seller.alamat %></td>
-                            <td><%= seller.id_admin %></td>
+                            <td><%= seller.usernames %></td>
                             <td>
-                                <a href="edit/<%= seller.id %>" class="btn btn-sm btn-light">Edit</a>
-                                <a href="delete/<%= seller.id %>" class="btn btn-sm btn-light">Delete</a>
+                                <a href="edit/<%= seller.id_reseller %>" class="btn btn-sm btn-light">Edit</a>
+                                <a href="delete/<%= seller.id_reseller %>" class="btn btn-sm btn-light">Delete</a>
                             </td>
                         </tr>
                     <% }); %>
